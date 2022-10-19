@@ -1,0 +1,30 @@
+.TH WORDS 5 "4 June 1994" "Linux" "Linux Programmers Manual"
+.SH NAME
+spanish \- a list of spanish words
+.SH DESCRIPTION
+.B /usr/share/dict/spanish
+is an ASCII file which contains an alphabetic list of words, one per
+line.
+.SH AUTHOR
+Word lists are collected and maintained by various authors.
+.SH FILES
+.I /etc/dictionaries-common/words
+This is a link to a /usr/share/dict/<language> file.
+
+.I /usr/share/dict/words
+This is linked to /etc/dictionaries-common/words, it exists for
+software compatibility.  
+
+.PP
+The directory
+.I /usr/share/dict
+can contain word lists for many languages, with name of the language
+in English, e.g.,
+.I /usr/share/dict/french and /usr/share/dict/danish
+contain respectively lists of French and Danish words if they exist.
+Such lists should be coded using the ISO 8859 character set encoding.
+.SH "SEE ALSO"
+.IR ispell "(1)."
+.SH History
+The words lists are not specific, and may be generated from any number
+of sources.

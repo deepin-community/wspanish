@@ -1,0 +1,17 @@
+wspanish for Debian
+-------------------
+
+This is a small list of Spanish words and is not at all
+intended to be complete. It also contains some archaisms.
+
+If you want a complete wordlist, consider making it out of the
+spellchecking dictionaries. For instance, if Debian ispanish
+package is installed,
+
+$ gzip -d -c /usr/share/ispell/espa~nol.mwl.gz | ispell -d spanish -e | \
+  tr -s ' ' '\n' | grep -v ^[0-9] | sort -u | \
+  iconv -f latin1 -t utf-8 > spanish.words
+
+will generate a much more complete wordlist.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>, Fri,  4 Sep 2009 12:30:52 +0200

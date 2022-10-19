@@ -1,0 +1,333 @@
+wspanish (1.0.29) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Upgrade to newer source format 3.0 (native).
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 28 Dec 2020 17:13:11 +0100
+
+wspanish (1.0.28+nmu1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Fri, 25 Dec 2020 18:09:22 +0100
+
+wspanish (1.0.28) unstable; urgency=medium
+
+  * debian/control:
+    - Update Vcs-Browser and Vcs-Git for salsa migration.
+    - Bump Standards-Version. No changes required.
+  * Bump debhelper compat level to 11.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Fri, 04 May 2018 16:47:43 +0200
+
+wspanish (1.0.27) unstable; urgency=low
+
+  * debian/control:
+    - Modify to use ${wordlist:Depends} dictionaries-common-dev
+      (>= 1.22.0) feature.
+    - Bump Standards Version. No changes required.
+    - Canonicalize VCS-* headers.
+    - Explain better long description.
+  * Add debian/source/format for 3.0 (quilt).
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Wed, 05 Mar 2014 18:22:37 +0100
+
+wspanish (1.0.26) unstable; urgency=low
+
+  * debian/rules:
+    - Fix lintian debian-rules-missing-recommended-target build-{arch,indep}.
+  * debian/control:
+    - Fix lintian description-synopsis-starts-with-article.
+    - Bump Standards Version. No changes needed.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue, 04 Oct 2011 16:00:45 +0200
+
+wspanish (1.0.25) unstable; urgency=low
+
+  * Fix reminiscences from ancient 7 bit encodings (Changed u¨ to ü).
+    Thanks Héctor M. Monacci for noticing.
+  * Update Copyright Years.
+  * Add README.Debian with info about how to generate a complete
+    Spanish wordlist in Debian systems. Remark in control file
+    that this package does not intend to provide a complete
+    wordlist.
+  * Some debian/rules cleanup and reorganization.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Fri, 04 Sep 2009 12:49:47 +0200
+
+wspanish (1.0.24) unstable; urgency=low
+
+  * debian/control:
+    - Build Dep on at least dictionaries-common-dev 1.2 to use
+      new debhelper snippets.
+  * Raise debhelper compat level to 7. Use dh_prep.
+  * Raise Standards-Version to 3.8.1. No changes required.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 16 Mar 2009 00:51:46 +0100
+
+wspanish (1.0.23) unstable; urgency=low
+
+  * Add ${misc:Depends} where needed.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Wed, 18 Feb 2009 00:46:39 +0100
+
+wspanish (1.0.22) unstable; urgency=low
+
+  * debian/rules:
+    - Use iconv instead of recode.
+  * debian/control:
+    - Bumped Standards-Version to 3.8.0. No changes required
+    - Removed no longer needed recode Build-dep.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 20 Oct 2008 17:39:16 +0200
+
+wspanish (1.0.21) unstable; urgency=low
+
+  * More improvements in Copright notice.
+  * debian/control: Added Vcs fields.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Wed, 04 Jun 2008 14:24:45 +0200
+
+wspanish (1.0.20) unstable; urgency=low
+
+  * debian/control:
+    - Bumped standards version to 3.7.3. No changes needed
+  * Improved debian/copyright.
+  * Recoded to utf8, Debian's default encoding. Needs recode
+    build-dependency (Closes: #437719).
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 25 Feb 2008 13:56:58 +0100
+
+wspanish (1.0.19) unstable; urgency=low
+
+  * debian/control:
+    - Moved debhelper to Build-Depends. It is required to run the
+      clean target of debian/rules and therefore must be listed in
+      Build-Depends, even if no architecture-dependent packages
+      are built (Policy Manual, section 7.6). Thanks lintian for
+      the check and Pierre Habouzit for reminding.
+    - Raise Standards-Version to 3.7.2. No changes required.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Fri, 16 Jun 2006 14:14:23 +0200
+
+wspanish (1.0.18) unstable; urgency=low
+
+  * Removed a couple of too obsolete words that were already
+    antique in 1876 (closes: #359743)
+  * debian/control: Bumped Standards version to 3.6.2. No changes required.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue,  4 Apr 2006 15:24:04 +0200
+
+wspanish (1.0.16) unstable; urgency=low
+
+  * Wordlist sorted according to spanish rules, not according
+    to some strange mixture of english and not-well-known rules.
+  * Some (many) corrections, thanks to Martín Darío Safe
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 14 Nov 2005 12:09:43 +0100
+
+wspanish (1.0.15) unstable; urgency=low
+
+  * debian/control:
+    - Add "| debconf-2.0" to wspanish debconf dependency
+      to unblock installation of cdebconf
+  * debian/rules:
+    - Set debhelper compat level to 4 and put in a debian/compat file
+    - Switch to dh_installman from dh_installmanpages
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Thu,  1 Sep 2005 17:26:24 +0200
+
+wspanish (1.0.14) unstable; urgency=low
+
+  * debian/changelog:
+    - Recoded to utf8.
+    - Added a Local Variables section with coding: utf-8.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Wed,  9 Mar 2005 15:32:45 +0100
+
+wspanish (1.0.13) unstable; urgency=low
+
+  * Removed spanish task from debian/control.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 28 Jun 2004 12:37:04 +0200
+
+wspanish (1.0.12) unstable; urgency=low
+
+  * Using new dictionaries-common config system. Updated dependencies
+    to dictionaries-common (>=0.20) and build-dependencies to
+    dictionaries-common-dev (>=0.20)  (closes: #232173)
+  * Raised Standards-Version to 3.6.1. No changes required.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Wed, 11 Feb 2004 10:16:23 +0100
+
+wspanish (1.0.11.10) unstable; urgency=low
+
+  * debian/control: Make sure package is build with at least
+    dictionaries-common 0.15.5.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 13 Oct 2003 16:00:32 +0200
+
+wspanish (1.0.11.9) unstable; urgency=low
+
+  *  Changed word "inexpuganble" to "inexpugnable". Thanks to
+     Margarita Manterola (closes: #198467)
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 23 Jun 2003 16:17:30 +0200
+
+wspanish (1.0.11.8) unstable; urgency=low
+
+  * Versioning Build-depends-indep deoendency on debhelper
+  * Bumping standars version to 3.5.9. No changes were required.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Thu, 13 Mar 2003 16:00:43 +0100
+
+wspanish (1.0.11.7) unstable; urgency=low
+
+  * Just rebuilding to use the new features of dictionaries-common-0.8.4
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Wed, 23 Oct 2002 16:53:21 +0200
+
+wspanish (1.0.11.6) unstable; urgency=low
+
+  * New policy compliant official package (closes: #164269).
+  * Final fine tunings or policy:
+    - Lowered 'Pre-Depends: dictionaries-common' to a simple Depends.
+    - Removed all the warnings about the experimental character of the
+      package
+  * Added 'Task: spanish' line to the control file for tasksel use.
+  * Removed accents from my name to have a 7bit clean control file.
+  * words.5: Changed occurrences of /etc/dictionaries to
+    /etc/dictionaries-common/words
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 14 Oct 2002 13:09:38 +0200
+
+wspanish (1.0.11.5) unstable; urgency=low
+
+  * Priority set to optional
+
+ -- Agustín Martín Domingo <agmartin@debian.org>  Thu,  7 Mar 2002 13:27:04 +0100
+
+wspanish (1.0.11.4) unstable; urgency=low
+
+  * Recoded list of spanish words to latin1. This makes obsolete any
+    build dependency on flex or c-compiler. (closes: #135134)
+  * Moved all package install to debian/rules, removed Makefile and
+    diacrit7to8.l as they are no longer need at all. As a mater of fact
+    they were a heavy way of doing something a simple sed script could
+    have done.
+
+ -- Agustín Martín Domingo <agmartin@debian.org>  Mon, 25 Feb 2002 15:45:59 +0100
+
+wspanish (1.0.11.3) unstable; urgency=low
+
+  * The "typo fixing" release.
+  * debian/{changelog,control}: language names should be
+    capitalized in English. Thanks, Matt! (closes: #125508)
+  * Removed obsolete local variables from the changelog file.
+
+ -- Agustín Martín Domingo <agmartin@debian.org>  Wed,  9 Jan 2002 16:16:52 +0100
+
+wspanish (1.0.11.2) frozen unstable; urgency=low
+
+  * Reverted name from words-spanish to wspanish
+
+ -- Agustín Martín Domingo <agmartin@debian.org>  Thu, 29 Nov 2001 17:13:53 +0100
+
+words-spanish (1.0.11.1) frozen unstable; urgency=low
+
+  * Rebuilt against dictionaries-common-dev 0.4.4
+  * Made package a native one, as it really is, with words merged from
+    different sources by debian maintainer.
+
+ -- Agustín Martín Domingo <agmartin@debian.org>  Mon, 12 Nov 2001 17:45:59 +0100
+
+words-spanish (1.0-11) frozen unstable; urgency=low
+
+  * Rebuilt against new dictionaries-common-dev. Will change "isdefault
+    true" to "seen false" in debconf db_fset calls
+  * Added debconf dependency to keep lintian happy, although
+    dicionaries-common already have it
+  * Raised policy version to 3.5. Seems to require no changes
+
+ -- Agustín Martín Domingo <agmartin@debian.org>  Fri,  7 Sep 2001 15:59:16 +0200
+
+words-spanish (1.0-10) frozen unstable; urgency=low
+
+  * Rebuilt against new dictionaries-common-dev
+
+ -- Agustín Martín Domingo <agmartin@debian.org>  Thu, 12 Jul 2001 16:55:52 +0200
+
+words-spanish (1.0-9) frozen unstable; urgency=low
+
+  * Added debhelper and dictionaries-common build dependency.
+  * Raised policy to 3.1.0
+  * words.5: Changed references to /usr/dict by references to
+    /usr/share/dict
+  * control: The spanish dictionary is now for /usr/share/dict, not for
+    /usr/dict
+  * man pages now installed under /usr/share/man
+  * debian/rules: Added removal of words_debinst generated files to clean tag
+
+ -- Agustín Martín Domingo <agmartin@debian.org>  Fri, 13 Oct 2000 13:50:50 +0200
+
+words-spanish (1.0-8) frozen unstable; urgency=low
+
+  * Renamed source package to words-ispanish
+  * Migrated to debhelper
+  * wspanish.postinst: Added patch from Charles Briscoe-Smith to smooth
+    upgrading from /usr/dict/spanish to /usr/share/dict/spanish. Closes
+    40324
+  * Removed old postinst and prerm scripts. Now debhelper and words-debinst
+    generate them.
+
+ -- Agustín Martín Domingo <agmartin@aq.upm.es>  Tue, 20 Jun 2000 13:39:21 +0200
+
+wspanish (1.0-7) frozen unstable; urgency=low
+
+  * Uses /usr/share/dict for FHS compliance
+  * Uses update-alternatives to manage /usr/share/dict/words.
+  (Closes Bug#27951)
+  * Close the bugs fixed by the previous NMU. (Closes Bug#19600)
+
+ -- Enrique Zanardi <ezanard@debian.org>  Fri, 23 Oct 1998 11:52:11 +0100
+
+wspanish (1.0-6.1) frozen unstable; urgency=low
+
+  * Non-maintainer release.
+  * Use the same postinst, prerm, and postrm scripts for wspanish as for
+    the other wordlist packages.  This partially deals with the excessive
+    prompting mentioned in #7454 and #19600.  A proper solution requires
+    changing all wordlist packages to use update-alternatives, but that
+    is best left for Debian 2.1.
+  * Install stuff under /usr/doc without execute bit set.  (Lintian)
+
+ -- Charles Briscoe-Smith <cpbs@debian.org>  Wed,  8 Apr 1998 04:03:38 +0100
+
+wspanish (1.0-6) frozen unstable; urgency=low
+
+  * Provides wordlist (Closes Bug#9394)
+
+ -- Enrique Zanardi <ezanardi@molec1.dfis.ull.es>  Wed, 7 May 1997 10:26:48 +0100
+
+wspanish (1.0-5) unstable; urgency=low
+
+  * Changed /bin/perl to /usr/bin/perl in postint and prerm scripts.
+    (Closes Bug#8027 and Bug#8028).
+
+ -- Enrique Zanardi <ezanardi@molec1.dfis.ull.es>  Thu, 13 Mar 1997 00:57:11 +0000
+
+wspanish (1.0-4) unstable; urgency=low
+
+  * New mantainer.
+  * Converted to new packaging format (Closes Bug#3698,3926).
+  * Some typos corrected in words list (Closes Bug#6969).
+
+ -- Enrique Zanardi <ezanardi@molec1.dfis.ull.es>  Mon, 17 Feb 1997 01:07:14 +0000
+
+
+Local Variables:
+ coding: utf-8
+End:

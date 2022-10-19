@@ -1,0 +1,21 @@
+Source: wspanish
+Maintainer: Agustin Martin Domingo <agmartin@debian.org>
+Section: text
+Priority: optional
+Build-Depends: debhelper-compat (= 12)
+Build-Depends-Indep: dictionaries-common-dev (>= 1.2)
+Standards-Version: 4.1.4
+Vcs-Browser: https://salsa.debian.org/debian/wspanish
+Vcs-Git: https://salsa.debian.org/debian/wspanish.git
+
+Package: wspanish
+Architecture: all
+Depends: debconf | debconf-2.0,
+         ${misc:Depends},
+         ${wordlist:Depends}
+Provides: wordlist
+Description: Spanish dictionary words for /usr/share/dict
+ This package contains an alphabetic list of some Spanish words.
+ .
+ Note that this wordlist is not intended to be complete and many words
+ are not fully expanded.
